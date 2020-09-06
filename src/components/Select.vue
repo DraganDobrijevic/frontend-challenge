@@ -32,7 +32,7 @@ export default {
     }
   },
   created() {
-    this.class1 = `col col-${this.col}`
+    this.class1 = `col col-lg-${this.col}`
   },
   methods: {
     updateSoF: function () {

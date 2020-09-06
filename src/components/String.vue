@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="[class1]">
     <label v-show="ifLabel" :for="name">{{ label }}:</label> 
-    <input v-model.lazy="value" type="text" :id="i" :name="name" autocomplete="off" class="form-control text-center" required @change="updateValue($event)">
+    <input v-model.lazy="value" :type="type" :id="i" :name="name" autocomplete="off" class="form-control text-center" required @change="updateValue($event)">
   </div>
 </template>
 
@@ -20,11 +20,23 @@ export default {
       component: this.object1.component,
       col: this.object1.col,
       class1: "",
-      ifLabel: false
+      ifLabel: true,
+      type: ""
     }
   },
   created() {
-    this.class1 = `col col-${this.col}`
+    this.class1 = `col col-lg-${this.col}`
+
+    if(this.object1.deleteLabel) {
+      this.ifLabel = false
+    }
+
+    if(this.object1.name === 'phone') {
+      this.type = 'tel';
+    }
+    else {
+      this.type = 'text';
+    }
   },
   methods: {
     updateValue: function (e) {
@@ -35,6 +47,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="sass" scoped>
 
 </style>

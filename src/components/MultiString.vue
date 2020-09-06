@@ -44,7 +44,7 @@ export default {
     }
   },
   created() {
-    this.class1 = `col col-${this.col}`
+    this.class1 = `col col-lg-${this.col}`
 
     this.objectMS = {
       label: this.label,
@@ -52,7 +52,7 @@ export default {
       value: this.value,
       component: this.component,
       col: this.col,
-      ifLabel: false,
+      deleteLabel: true,
     };
   },
   methods: {

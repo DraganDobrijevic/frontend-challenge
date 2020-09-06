@@ -40,7 +40,7 @@ export default {
     }
   },
   created() {
-    this.class1 = `col col-${this.col}`;
+    this.class1 = `col col-lg-${this.col}`;
     this.object2 = {
       label: this.label,
       name: this.name,
@@ -56,7 +56,7 @@ export default {
       value: this.value.phone,
       component: this.component,
       col: this.col,
-      ifLabel: false,
+      deleteLabel: true,
     };
   },
   methods: {

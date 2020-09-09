@@ -93,8 +93,8 @@ export default {
         this.firstNameKey = name;
         this.firstNameValue = value;
       } else {
-          this.lastNameKey = name;
-          this.lastNameValue = value;
+        this.lastNameKey = name;
+        this.lastNameValue = value;
       } 
     },
     email: function(name, value) {

@@ -17,6 +17,8 @@
         </div>
       </div>
     </div>
+    {{ vouchers }} <hr>
+    {{ vouchersDone }}
   </div> 
 </template>
 
@@ -41,6 +43,8 @@ export default {
       n: 1,
       objectMS: Object,
       vouchers: [],
+      deletedInputs: 0,
+      x: 'x',
     }
   },
   created() {
@@ -55,30 +59,44 @@ export default {
       deleteLabel: true,
     };
   },
+  computed: {
+    vouchersDone: function () {
+      return this.vouchers.filter(ele => ele !== 'x' && ele !== '')
+    }
+  },
   methods: {
     addAnotherVoucher: function() {
       this.n++;
     },
     delVoucher: function(e) {
       const value = e.path[2].children[0].__vue__.value;
+      console.log(value.length);
       const index = this.vouchers.indexOf(value);
 
-      if (index > -1) {
-        this.vouchers.splice(index, 1);
-      }
+      this.deletedInputs++;
 
-      if(this.n !== 1) {
-        console.log('u ifu ' + this.n);
+      if(this.deletedInputs < this.n) {
+    
+        if (index > -1) {
+          this.vouchers.splice(index, 1, 'x');
+        }
+        else {
+          this.vouchers.push('x');
+        }
+
         e.path[2].classList.add("remove");
+        e.path[2].remove();
       }
-      
+      else {
+        this.deletedInputs--;
+      } 
     },
     addVoucher: function(name, value, e) {
       let id = e.path[0].id;
       id = id - 1;
       this.vouchers.splice(id, 1, value);
 
-      this.$emit('multiString', name, this.vouchers);
+      this.$emit('multiString', name, this.vouchersDone);
     }
   }
 

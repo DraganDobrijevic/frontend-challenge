@@ -12,7 +12,7 @@
 <style lang="sass">
 
 body 
-  width: 100%
+  width: 100vw
   overflow-x: hidden
   background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(12, 131, 238, .8))
 
@@ -27,7 +27,7 @@ body
 
 #nav 
   padding: 30px
-  width: 100%
+  width: 100vw
   height: 80px
   background: rgba(12, 131, 238, .8)
   letter-spacing: 0.1rem
@@ -36,7 +36,7 @@ body
   font-weight: bold
   color: rgba(255, 255, 255, .8)
   text-decoration: none
-  padding: 0 2rem
+  padding: 0 1rem
 
 #nav a.router-link-exact-active 
   color: rgb(44, 62, 80)

@@ -41,7 +41,7 @@ import Select from '@/components/Select.vue'
 import Phone from '@/components/Phone.vue'
 import MultiString from '@/components/MultiString.vue'
 // import axios from 'axios'
-import json from '../../../resources/sample.json'
+import json from '../../resources/sample.json'
 
 export default {
   name: 'Form',

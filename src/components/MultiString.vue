@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-    {{ vouchers }} <hr>
-    {{ vouchersDone }}
+    <!-- {{ vouchers }} <hr>
+    {{ vouchersDone }} -->
   </div> 
 </template>
 
@@ -64,6 +64,11 @@ export default {
       return this.vouchers.filter(ele => ele !== 'x' && ele !== '')
     }
   },
+  watch: {
+    vouchers: function () {
+      this.$emit('multiString', this.name, this.vouchersDone);
+    }
+  },
   methods: {
     addAnotherVoucher: function() {
       this.n++;
@@ -95,8 +100,6 @@ export default {
       let id = e.path[0].id;
       id = id - 1;
       this.vouchers.splice(id, 1, value);
-
-      this.$emit('multiString', name, this.vouchersDone);
     }
   }
 
@@ -104,7 +107,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .remove 
-    display: none
+
+.remove 
+  display: none
   
 </style>

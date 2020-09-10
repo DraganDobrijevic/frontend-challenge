@@ -23,9 +23,8 @@
         <MultiString class="form-group" :object1="multiStringObject" @multiString="multiString"/>
       </div>
       <div class="row justify-content-center mt-4">
-        <div class="col-6">
-          <input type="submit" value="Submit" class="btn-block btn2 btn2--blue btn2--animated">
-          <!-- <input type="submit" value="Submit" class="btn btn-outline-primary btn-block btn2 btn2--green btn2--animated"> -->
+        <div class="col-lg-6">
+          <input type="submit" value="Submit" class="btn-block btnS btnS--blue btnS--animated">
         </div> 
       </div>
       <!-- <hr> {{ object }} <hr>
@@ -68,15 +67,15 @@ export default {
       firstNameValue: String, 
       lastNameKey: String,
       lastNameValue: String, 
-      emailKey: "",
-      emailValue: "", 
-      genderKey: "",
-      genderValue: "", 
-      sourceOfAttentionKey: "",
-      sourceOfAttentionValue: "",
-      phoneKey: "",
+      emailKey: String,
+      emailValue: String, 
+      genderKey: String,
+      genderValue: String, 
+      sourceOfAttentionKey: String,
+      sourceOfAttentionValue: String,
+      phoneKey: String,
       phoneValue: Object,
-      multiStringKey: "",
+      multiStringKey: String,
       multiStringValue: Array,
       object: Object,
       jsonObject: JSON,
@@ -140,78 +139,75 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  $primary-color: blue
-  // Colors
-  $color-primary: rgba(69, 83, 211, .5)
-  $color-primary-light:  rgba(18, 241, 211, 0.8)
-  $color-primary-dark: rgba(68, 82, 211, 0.8)
 
-  $color-white: #fff
-  $color-black: #000
+// Colors
+$btn-color: rgb(0, 92, 200)
+$btnS-color-bg: rgba(12, 131, 238, .6)
 
-  // Font
-  $default-font-size: 1rem
+$color-start: rgba(12, 131, 238, .8)
+$color-end: rgba(255, 255, 255, .6)
 
-  .form 
-    position: absolute
-    width: 100%
-    padding: 4rem
-    transform: skewY(-4.5deg)
-    background: linear-gradient(to right, rgba(12, 131, 238, .8), rgba(255, 255, 255, .6))
+$color-white: #fff
+$color-black: #000
 
-  form
-    transform: skewY(4.5deg)
+// Font
+$default-font-size: 1rem
 
-  .btn2 
-    &,
-    &:link,
-    &:visited 
-      text-decoration: none
-      // padding: .8rem 4rem
-      display: inline-block
-      transition: all .6s ease-in-out 
+.form 
+  position: absolute
+  width: 100%
+  padding: 4rem
+  transform: skewY(-4.5deg)
+  background: linear-gradient(to right, $color-start, $color-end)
 
-      padding: .375rem .75rem
-      line-height: 1.5
-      position: relative
-      font-size: $default-font-size
-      cursor: pointer
+form
+  transform: skewY(4.5deg)
+
+.btnS 
+  &,
+  &:link,
+  &:visited 
+    text-decoration: none
+    display: inline-block
+    transition: all .6s ease-in-out 
+
+    padding: .375rem .75rem
+    line-height: 1.5
+    position: relative
+    font-size: $default-font-size
+    cursor: pointer
     
-    &:hover 
-      transform: translateY(-3px)
-      color: $color-white
-      border: 1px solid transparent
-      border-radius: 7rem  
-      box-shadow: 0 1rem 2rem rgba($color-black, .2)
-      background: rgba(12, 131, 238, .8)
-
-      &::after 
-        transform: scaleX(1.4) scaleY(1.6)
-        opacity: 0
+  &:hover 
+    transform: translateY(-3px)
+    color: $color-white
+    border: 1px solid transparent
+    border-radius: 7rem  
+    box-shadow: 0 1rem 2rem rgba($color-black, .2)
+    background: $btnS-color-bg
         
-    &:active,
-    &:focus 
-      outline: none
-      transform: translateY(-1px)
-      box-shadow: 0 .5rem 1rem rgba($color-black, .2)
+  &:active,
+  &:focus 
+    outline: none
+    transform: translateY(-1px)
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2)
         
-    &--blue 
-      color: #005CC8
-      background-color: transparent
-      border: 1px solid #005CC8
-      border-radius: .25rem 
+  &--blue 
+    color: $btn-color
+    background-color: transparent
+    border: 1px solid $btn-color
+    border-radius: .25rem 
 
-    &--animated 
-      animation: moveInBottom 1s ease-in 
-      animation-fill-mode: backwards
+  &--animated 
+    animation: moveInBottom 1s ease-in 
+    animation-fill-mode: backwards
 
-  @keyframes moveInBottom 
-    0% 
-      opacity: 0
-      transform: translateY(1rem)
+@keyframes moveInBottom 
+  0% 
+    opacity: 0
+    transform: translateY(1rem)
     
-    100% 
-      opacity: 1
-      transform: translate(0)      
+  100% 
+    opacity: 1
+    transform: translate(0)      
     
 </style>

@@ -27,7 +27,6 @@ export default {
 
 .input
     position: absolute
-    // height: 100%
     overflow-y: auto
     width: 100%
     padding: 10rem 1rem

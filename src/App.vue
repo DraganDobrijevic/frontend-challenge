@@ -11,52 +11,41 @@
 
 <style lang="sass">
 
-body 
-  width: 100vw
-  overflow-x: hidden
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(12, 131, 238, .8))
+// Colors
+$color-start: rgba(255, 255, 255, .6)
+$color-end: rgba(12, 131, 238, .8)
 
-#app 
+$color-white: rgba(255, 255, 255, .8)
+
+$nav-color: rgba(12, 131, 238, .8)
+$nav-color-a-hover-active: rgb(44, 62, 80)
+
+body 
   font-family: Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: #2c3e50
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(12, 131, 238, .8) 50%)
+  width: 100%
   height: 100%
+  overflow-x: hidden
+  background: linear-gradient(to right, $color-start, $color-end)
+  color: #2c3e50
 
 #nav 
   padding: 30px
-  width: 100vw
+  width: 100%
   height: 80px
-  background: rgba(12, 131, 238, .8)
+  background: $nav-color
   letter-spacing: 0.1rem
 
 #nav a 
-  font-weight: bold
-  color: rgba(255, 255, 255, .8)
-  text-decoration: none
   padding: 0 1rem
+  color: $color-white
+  text-decoration: none
+  font-weight: bold
 
 #nav a.router-link-exact-active 
-  color: rgb(44, 62, 80)
+  color: $nav-color-a-hover-active
 
 #nav a:hover
-  color: rgb(44, 62, 80)
-  
-
-// #nav a 
-//     display: inline
-//     font-size: 16px
-//     font-weight: bold
-//     margin-left: 20px
-//     padding: 3px 5px
-// 
-
-// #nav a.router-link-exact-active  
-//     /* color: #F9F9F9;  */
-//     color: rgb(61, 50, 23)
-//     text-decoration: none
-// 
+  color: $nav-color-a-hover-active 
 
 </style>

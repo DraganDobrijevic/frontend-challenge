@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import json from '../../../resources/sample.json'
+import json from '../../resources/sample.json'
 
 export default {
     data() {

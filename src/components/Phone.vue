@@ -61,15 +61,11 @@ export default {
   },
   methods: {
     update1: function(name, selected) {
-      console.log(name);
-      console.log(selected);
       this.extName = 'ext';
       this.selected = selected;
       this.pObject()
     },
     update2: function(name, value) {
-      console.log(name);
-      console.log(value);
       this.phoneName = 'phone';
       this.phoneNumber = value;
       this.pObject()

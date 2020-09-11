@@ -72,6 +72,7 @@ export default {
   methods: {
     addAnotherVoucher: function() {
       this.n++;
+      this.vouchers.push('x');
     },
     delVoucher: function(e) {
       const value = e.path[2].children[0].__vue__.value;

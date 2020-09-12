@@ -17,8 +17,6 @@
         </div>
       </div>
     </div>
-    <!-- {{ vouchers }} <hr>
-    {{ vouchersDone }} -->
   </div> 
 </template>
 
@@ -76,7 +74,6 @@ export default {
     },
     delVoucher: function(e) {
       const value = e.path[2].children[0].__vue__.value;
-      console.log(value.length);
       const index = this.vouchers.indexOf(value);
 
       this.deletedInputs++;

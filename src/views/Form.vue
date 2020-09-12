@@ -27,8 +27,6 @@
           <input type="submit" value="Submit" class="btn-block btnS btnS--blue btnS--animated">
         </div> 
       </div>
-      <!-- <hr> {{ object }} <hr>
-      {{jsonObject}}  -->
     </form>
   </div>
 </template>

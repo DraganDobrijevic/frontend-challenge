@@ -4,7 +4,6 @@
     <div class="row justify-content-center">
       <Select class="form-group" :object1="object2" @sourceOfAttention="update1"/>
       <String class="form-group" :object1="object3" @input="update2"/>
-      <!-- {{ phoneObject }} -->
     </div> 
   </div>
 </template>
